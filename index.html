@@ -68,6 +68,10 @@
   .project .meta{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0 0 14px;}
   .project p.body{margin:0 0 14px;max-width:var(--measure);}
   .stack{font-family:var(--mono);font-size:.71rem;color:var(--accent);margin:0;opacity:.85;}
+  .links{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:.75rem;margin:0 0 14px;}
+  .links a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);padding-bottom:1px;}
+  .links a:hover{border-bottom-color:var(--accent);}
+  .links a::after{content:" ↗";opacity:.65;}
   .roles .title{font-family:var(--mono);font-weight:600;font-size:.98rem;}
   .kit div h4{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--accent);margin:0 0 6px;}
   .kit div h4::before{content:"› ";}
@@ -114,16 +118,28 @@
     <div class="work">
 
       <article class="project">
-        <h3>A browser extension that reads four listing portals</h3>
-        <p class="meta">Real estate fintech startup · 2025–2026 · Owned end to end</p>
+        <h3>RetroRate VHS — surfacing hidden assumable mortgages while you browse</h3>
+        <p class="meta">RetroRate · 2025–2026 · Owned end to end · Live on the Chrome Web Store</p>
         <p class="body">
-          Built and owned a Chrome extension that surfaces assumable-loan data directly on
-          Zillow, Redfin, Realtor.com and Compass listing pages. I shipped the original
-          overlay, then led a full architecture rewrite that reads each portal's own listing
-          responses instead of calling a preview endpoint — cutting latency and making the
-          product resilient to the portal redesigns that used to break it. Later work added
-          nationwide coverage, batched assumability checks with rate limiting and in-flight
-          guards, and usage tracking behind an internal stats dashboard.
+          Assumable mortgages — FHA and VA loans a buyer can take over at the seller's
+          original rate — are invisible on every major listing portal, which means millions
+          of homes carrying a 3% loan look identical to everything else on the market. VHS
+          surfaces them in place: as you browse Zillow, Redfin, Realtor.com and Compass, it
+          flags listings with an assumable loan and shows the rate, the monthly saving, and
+          the lifetime interest saving against today's market, across all 50 states.
+        </p>
+        <p class="body">
+          I owned it end to end. I shipped the original overlay and popup, then led a full
+          architecture rewrite that intercepts each portal's own listing responses rather
+          than calling a preview endpoint — cutting latency and making the product resilient
+          to the portal redesigns that used to break it. Later work added national coverage,
+          batched assumability checks with rate limiting and in-flight guards, price and
+          status observation on listing pages, Compass support, and usage tracking behind an
+          internal stats dashboard.
+        </p>
+        <p class="links">
+          <a href="https://chromewebstore.google.com/detail/mlaiomcndafjggoeafhegcdpghplmbmg" rel="noopener" target="_blank">Chrome Web Store</a>
+          <a href="https://www.retrorate.com/product/vhs/" rel="noopener" target="_blank">Product page</a>
         </p>
         <p class="stack">TypeScript · React · Vite · Chrome Extensions (MV3) · Node</p>
       </article>
