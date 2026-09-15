@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bo Clow — Senior Software Engineer</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+
+  :root{
+    --ground:#0B0E11; --surface:#12161A; --ink:#DCE3EA; --muted:#7E8A96;
+    --rule:#1F262D; --accent:#7FB2E5; --accent-dim:#2A3A4A;
+    --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --shell:54rem; --measure:68ch;
+  }
+  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+    --ground:#F7F9FB; --surface:#FFFFFF; --ink:#111820; --muted:#5A6774;
+    --rule:#DCE3EA; --accent:#1F5F9E; --accent-dim:#D8E5F2;}}
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  img{max-width:100%;}
+  a{color:inherit;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:24px;}
+  .masthead{position:sticky;top:0;z-index:10;background:var(--ground);border-bottom:1px solid var(--rule);}
+  .masthead .shell{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-block:14px;}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;}
+  .work{display:flex;flex-direction:column;}
+  .roles{list-style:none;margin:0;padding:0;}
+  .roles li{display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline;padding-block:16px;border-bottom:1px solid var(--rule);}
+  .roles .org{grid-column:1;color:var(--muted);font-size:.95rem;}
+  .roles .when{grid-column:2;grid-row:1;font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 32px;padding-top:24px;}
+  .kit div p{margin:0;font-size:.95rem;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:.78rem;}
+  .foot-links a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
+  .foot-links a:hover{border-bottom-color:var(--accent);}
+  footer{border-top:1px solid var(--rule);padding-block:36px 56px;}
+  @media (max-width:520px){
+    body{font-size:16px;} .hero{padding-block:44px 36px !important;}
+    .roles li{grid-template-columns:1fr;} .roles .when{grid-column:1;grid-row:auto;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;}
+  .wordmark{font-family:var(--mono);font-weight:600;font-size:.95rem;text-decoration:none;}
+  .wordmark::before{content:"~/ ";color:var(--accent);}
+  .masthead nav{display:flex;gap:18px;font-family:var(--mono);font-size:.72rem;}
+  .masthead nav a{color:var(--muted);text-decoration:none;}
+  .masthead nav a::before{content:"/";color:var(--accent-dim);margin-right:4px;}
+  .masthead nav a:hover{color:var(--accent);}
+  .hero{padding-block:60px 46px;}
+  .hero h1{font-family:var(--mono);font-weight:500;font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.22;letter-spacing:-.02em;margin:0 0 22px;text-wrap:balance;}
+  .hero h1 em{font-style:normal;color:var(--accent);}
+  .lede{font-size:1.08rem;max-width:var(--measure);margin:0 0 22px;color:var(--ink);}
+  .status{font-family:var(--mono);font-size:.76rem;color:var(--muted);margin:0 0 26px;max-width:var(--measure);}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:9px;box-shadow:0 0 0 3px var(--accent-dim);}
+  .btn{display:inline-block;font-family:var(--mono);font-size:.76rem;text-decoration:none;padding:9px 14px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:3px;}
+  .btn:hover{border-color:var(--accent);color:var(--accent);}
+  .btn--primary{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+  section{padding-block:8px 50px;}
+  .section-head{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--rule);}
+  .section-head h2{font-family:var(--mono);font-weight:500;font-size:.75rem;letter-spacing:.02em;color:var(--muted);margin:0;}
+  .section-head h2::before{content:"// ";color:var(--accent);}
+  .project{padding-block:28px;border-bottom:1px solid var(--rule);}
+  .project h3{font-family:var(--mono);font-weight:600;font-size:1.18rem;line-height:1.35;margin:0 0 8px;color:var(--ink);text-wrap:balance;}
+  .project .meta{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0 0 14px;}
+  .project p.body{margin:0 0 14px;max-width:var(--measure);}
+  .stack{font-family:var(--mono);font-size:.71rem;color:var(--accent);margin:0;opacity:.85;}
+  .roles .title{font-family:var(--mono);font-weight:600;font-size:.98rem;}
+  .kit div h4{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--accent);margin:0 0 6px;}
+  .kit div h4::before{content:"› ";}
+
+</style>
+</head>
+<body>
+
+
+<header class="masthead">
+  <div class="shell">
+    <a class="wordmark" href="#top">Bo Clow</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="shell hero">
+    <h1>Engineer who builds products <em>from scratch</em>.</h1>
+    <p class="lede">
+      I'm Bo — a senior full-stack engineer with eight years of experience. Most recently
+      I was the founding engineer at an early-stage real estate fintech startup, where I
+      owned entire product lines from architecture through production.
+    </p>
+    <p class="status">
+      <span class="dot" aria-hidden="true"></span>
+      San Diego, CA · Open to senior and staff engineering roles
+    </p>
+    <div class="actions">
+      <a class="btn btn--primary" href="./Bo_Clow_Resume.pdf">Download résumé (PDF)</a>
+      <a class="btn" href="mailto:boclow34@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/bo-clow" rel="me noopener" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <section id="work" class="shell">
+    <div class="section-head"><h2>Selected work</h2></div>
+
+    <div class="work">
+
+      <article class="project">
+        <h3>A browser extension that reads four listing portals</h3>
+        <p class="meta">Real estate fintech startup · 2025–2026 · Owned end to end</p>
+        <p class="body">
+          Built and owned a Chrome extension that surfaces assumable-loan data directly on
+          Zillow, Redfin, Realtor.com and Compass listing pages. I shipped the original
+          overlay, then led a full architecture rewrite that reads each portal's own listing
+          responses instead of calling a preview endpoint — cutting latency and making the
+          product resilient to the portal redesigns that used to break it. Later work added
+          nationwide coverage, batched assumability checks with rate limiting and in-flight
+          guards, and usage tracking behind an internal stats dashboard.
+        </p>
+        <p class="stack">TypeScript · React · Vite · Chrome Extensions (MV3) · Node</p>
+      </article>
+
+      <article class="project">
+        <h3>An off-MLS property search product, built in under two months</h3>
+        <p class="meta">Real estate fintech startup · 2026 · Concept to production</p>
+        <p class="body">
+          A buyer-first search tool for listings that never reach the MLS, built from nothing
+          as a user app and an admin console sharing one headless-browser search engine. It
+          included a per-user credential service, connection management with health checks,
+          adapters for several listing portals, scheduled saved searches with email
+          notification, county-level coverage data with freshness and eviction rules, and
+          crawl-then-filter caching so repeat searches stayed fast.
+        </p>
+        <p class="stack">TypeScript · React · Node · MongoDB · BullMQ · Headless browser automation</p>
+      </article>
+
+      <article class="project">
+        <h3>AI-assisted loan verification, from data model to certificate</h3>
+        <p class="meta">Real estate fintech startup · 2026 · Concept to production</p>
+        <p class="body">
+          A product that verifies a mortgage's assumable terms and publishes the result as a
+          shareable, QR-linked certificate. I designed the data model and state machine,
+          automated confidence scoring with anomaly flags, and a county-recorder cross-check,
+          then built PDF export, badge lifecycle and expiry, the public certificate page, and
+          payment for verification. Gemini and Vertex AI handle document extraction from
+          uploaded mortgage statements and recover address matches that deterministic
+          comparison misses — shipped behind a feature flag, with request logging for
+          auditability and a migration path as model versions changed underneath.
+        </p>
+        <p class="stack">TypeScript · Node · Gemini · Vertex AI · GCP · Stripe</p>
+      </article>
+
+      <article class="project">
+        <h3>A brokerage-agnostic integration API</h3>
+        <p class="meta">Real estate fintech startup · 2026 · Design and build</p>
+        <p class="body">
+          Designed the API that partner brokerages integrate against, aligned to RESO field
+          standards so it fit the tooling they already had. The work covered the listing data
+          model and state machine, asynchronous verification against BigQuery, reverse
+          propagation of rate and property changes, webhook push with poll-based
+          reconciliation for missed events, and explicit versioning so existing consumers
+          were never broken by a change they hadn't opted into.
+        </p>
+        <p class="stack">RESO / OData · Node · BigQuery · Webhooks</p>
+      </article>
+
+      <article class="project">
+        <h3>Replacing an SFTP file drop with a real API</h3>
+        <p class="meta">Relay (formerly Kompas Care) · 2024–present · Contract</p>
+        <p class="body">
+          Advised a small business on replacing their manual SFTP file-ingestion process with
+          a REST API, then designed and built it in C#/.NET. I migrated their existing
+          customers onto the new interface and onboarded new ones, replacing bespoke
+          per-customer integration work with a repeatable process and documentation written
+          for non-technical stakeholders — so onboarding no longer depended on me being in
+          the room.
+        </p>
+        <p class="stack">C# · .NET · REST</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience" class="shell">
+    <div class="section-head"><h2>Experience</h2></div>
+    <ul class="roles">
+      <li>
+        <span class="title">Founding Software Engineer</span>
+        <span class="when">Feb 2025 – Sep 2026</span>
+        <span class="org">RetroRate — real estate fintech startup</span>
+      </li>
+      <li>
+        <span class="title">Senior Software Engineer, Contract</span>
+        <span class="when">Sep 2024 – Present</span>
+        <span class="org">Relay (formerly Kompas Care)</span>
+      </li>
+      <li>
+        <span class="title">Senior Software Engineer</span>
+        <span class="when">Jul 2021 – Feb 2025</span>
+        <span class="org">GE HealthCare</span>
+      </li>
+      <li>
+        <span class="title">Digital Technology Leadership Program</span>
+        <span class="when">Jul 2019 – Jul 2021</span>
+        <span class="org">GE HealthCare — rotations in full stack, network architecture, technical product</span>
+      </li>
+    </ul>
+
+    <div class="section-head" style="margin-top:44px;"><h2>Education</h2></div>
+    <ul class="roles">
+      <li>
+        <span class="title">M.S. Computer Science — Machine Learning</span>
+        <span class="when">2020 – 2023</span>
+        <span class="org">Georgia Institute of Technology</span>
+      </li>
+      <li>
+        <span class="title">B.S. Computer Engineering &amp; Computer Science</span>
+        <span class="when">2014 – 2019</span>
+        <span class="org">University of Wisconsin</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="toolkit" class="shell">
+    <div class="section-head"><h2>Toolkit</h2></div>
+    <div class="kit">
+      <div>
+        <h4>Languages</h4>
+        <p>TypeScript, JavaScript, Python, C#, Java, SQL</p>
+      </div>
+      <div>
+        <h4>Frontend</h4>
+        <p>React, React Native, Vite, browser extensions</p>
+      </div>
+      <div>
+        <h4>Backend</h4>
+        <p>Node, Express, GraphQL, REST, background workers</p>
+      </div>
+      <div>
+        <h4>Data</h4>
+        <p>MongoDB, BigQuery, SQL Server, large-scale backfills</p>
+      </div>
+      <div>
+        <h4>Cloud &amp; infrastructure</h4>
+        <p>GCP, AWS, Docker, CI/CD, Terraform, Sentry</p>
+      </div>
+      <div>
+        <h4>AI</h4>
+        <p>Gemini, Vertex AI, LLM integration in production paths</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="shell">
+    <div class="foot-links">
+      <a href="mailto:boclow34@gmail.com">boclow34@gmail.com</a>
+      <a href="https://linkedin.com/in/bo-clow" rel="me noopener" target="_blank">linkedin.com/in/bo-clow</a>
+      <a href="./Bo_Clow_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </footer>
+
+</main>
+
+
+</body>
+</html>
