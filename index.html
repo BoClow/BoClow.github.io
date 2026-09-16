@@ -138,21 +138,22 @@
         <h3>RetroRate VHS — surfacing hidden assumable mortgages while you browse</h3>
         <p class="meta">RetroRate · 2025–2026 · Owned end to end · Live on the Chrome Web Store</p>
         <p class="body">
-          Assumable mortgages — FHA and VA loans a buyer can take over at the seller's
-          original rate — are invisible on every major listing portal, which means millions
+          Assumable mortgages, FHA and VA loans a buyer can take over at the seller's
+          original rate, are invisible on every major listing portal, which means millions
           of homes carrying a 3% loan look identical to everything else on the market. VHS
           surfaces them in place: as you browse Zillow, Redfin, Realtor.com and Compass, it
-          flags listings with an assumable loan and shows the rate, the monthly saving, and
-          the lifetime interest saving against today's market, across all 50 states.
+          flags listings with an assumable loan and shows the rate, the monthly savings, and
+          the lifetime interest savings against today's market, across all 50 states.
         </p>
         <p class="body">
-          I owned it end to end. I shipped the original overlay and popup, then led a full
-          architecture rewrite that intercepts each portal's own listing responses rather
-          than calling a preview endpoint — cutting latency and making the product resilient
-          to the portal redesigns that used to break it. Later work added national coverage,
-          batched assumability checks with rate limiting and in-flight guards, price and
-          status observation on listing pages, Compass support, and usage tracking behind an
-          internal stats dashboard.
+          As the extension scaled to more traffic and more portals, calling out to a preview
+          endpoint for every listing became a bottleneck, and fragile, since a portal changing
+          its page could break it outright. I rebuilt it to read each portal's own
+          listing data directly as it loaded, which fixed both: faster, and resilient to
+          redesigns that used to take it down overnight. From there I took it national, solved
+          the throughput and race-condition problems that came with checking thousands of
+          listings at once without hammering our backend, and built the internal dashboard we
+          used to see how people were actually using it.
         </p>
         <p class="links">
           <a href="https://chromewebstore.google.com/detail/mlaiomcndafjggoeafhegcdpghplmbmg" rel="noopener" target="_blank">Chrome Web Store</a>
@@ -162,47 +163,71 @@
       </article>
 
       <article class="project">
-        <h3>An off-MLS property search product, built in under two months</h3>
-        <p class="meta">Real estate fintech startup · 2026 · Concept to production</p>
-        <p class="body">
-          A buyer-first search tool for listings that never reach the MLS, built from nothing
-          as a user app and an admin console sharing one headless-browser search engine. It
-          included a per-user credential service, connection management with health checks,
-          adapters for several listing portals, scheduled saved searches with email
-          notification, county-level coverage data with freshness and eviction rules, and
-          crawl-then-filter caching so repeat searches stayed fast.
-        </p>
-        <p class="stack">TypeScript · React · Node · MongoDB · BullMQ · Headless browser automation</p>
-      </article>
-
-      <article class="project">
         <h3>AI-assisted loan verification, from data model to certificate</h3>
         <p class="meta">Real estate fintech startup · 2026 · Concept to production</p>
         <p class="body">
-          A product that verifies a mortgage's assumable terms and publishes the result as a
-          shareable, QR-linked certificate. I designed the data model and state machine,
-          automated confidence scoring with anomaly flags, and a county-recorder cross-check,
-          then built PDF export, badge lifecycle and expiry, the public certificate page, and
-          payment for verification. Gemini and Vertex AI handle document extraction from
-          uploaded mortgage statements and recover address matches that deterministic
-          comparison misses — shipped behind a feature flag, with request logging for
-          auditability and a migration path as model versions changed underneath.
+          Verifying that a listing's loan is actually assumable, and at what rate, used to mean
+          trusting whatever the seller's agent claimed. This product turns that claim into
+          proof: an agent uploads a mortgage statement, Gemini and Vertex AI extract the terms
+          and reconcile them against a county-recorder cross-check, and a confidence-scored
+          certificate comes out the other end, with anomaly flags for anything that doesn't
+          line up. The certificate is public and shareable by QR code, and expires
+          automatically the moment a listing sells or goes off-market, so what's out there
+          always matches reality. The real challenge was trusting an AI extraction pipeline
+          enough to stand behind its output publicly, which meant building a rules-based
+          confidence engine and a full audit trail instead of taking the model's answer at
+          face value. Verification became a paid feature for listing agents, opening a new
+          revenue line for the business.
         </p>
         <p class="stack">TypeScript · Node · Gemini · Vertex AI · GCP · Stripe</p>
       </article>
 
       <article class="project">
-        <h3>A brokerage-agnostic integration API</h3>
-        <p class="meta">Real estate fintech startup · 2026 · Design and build</p>
+        <h3>MLS partner integrations, from signed deal to live product</h3>
+        <p class="meta">Real estate fintech startup · 2025–2026 · Concept to production</p>
         <p class="body">
-          Designed the API that partner brokerages integrate against, aligned to RESO field
-          standards so it fit the tooling they already had. The work covered the listing data
-          model and state machine, asynchronous verification against BigQuery, reverse
-          propagation of rate and property changes, webhook push with poll-based
-          reconciliation for missed events, and explicit versioning so existing consumers
-          were never broken by a change they hadn't opted into.
+          Every MLS partnership we signed was a new revenue relationship, and each came with
+          its own login flow, its own listing feed, and its own rules about what we were
+          allowed to say in an email. I built the system that turned a signed deal into a
+          running product: partner-specific OIDC login, a queue that turned raw MLS listings
+          into compliant, on-brand alert emails, and a per-partner rule catalog so each MLS
+          could have its own thresholds and disclosures. On top of the per-listing alerts I
+          set up an MLS-wide weekly digest campaign; together they now send more than 50,000
+          emails a month.
         </p>
-        <p class="stack">RESO / OData · Node · BigQuery · Webhooks</p>
+        <p class="stack">TypeScript · Node · SendGrid · OIDC · Cron / Queues</p>
+      </article>
+
+      <article class="project">
+        <h3>Turning a listing classifier into a paid agent product</h3>
+        <p class="meta">Real estate fintech startup · 2025–2026 · Concept to production</p>
+        <p class="body">
+          Most MLS listings never mention that their loan is assumable, agents don't know to
+          say it, or don't know it matters. I built a model that reads MLS remarks and flags
+          likely assumable mentions, then used that signal to promote and rank those listings
+          above the rest. That became the seed of an agent-facing dashboard where agents can
+          see how their listings are performing, claim and verify them, and see the savings
+          they're marketing to buyers. Wiring agent identity to MLS IDs so the dashboard
+          showed the right listings, and building the org-level upsell that turned one agent's
+          usage into a brokerage-wide sale, were what turned a detection feature into a second
+          revenue line.
+        </p>
+        <p class="stack">TypeScript · Node · React · Stripe · MongoDB</p>
+      </article>
+
+      <article class="project">
+        <h3>Taking search and maps from a prototype to the core product</h3>
+        <p class="meta">Real estate fintech startup · 2025–2026 · Proof of concept to production</p>
+        <p class="body">
+          The map and search experience is the product most users touch first, and it started
+          as a Google Maps proof of concept. I took it to production: split list/map views,
+          status-colored markers, geocoded location search backed by a nationwide dataset, and
+          county- and ZIP-level search for buyers who didn't have a single address to start
+          from. The unglamorous part was keeping it working everywhere it needed to: a long
+          tail of responsiveness, Safari, and mobile fixes, plus the state bugs that only
+          surface once real users stack filters in combinations no spec accounted for.
+        </p>
+        <p class="stack">TypeScript · React · Google Maps · Node</p>
       </article>
 
       <article class="project">
@@ -243,7 +268,7 @@
       <li>
         <span class="title">Digital Technology Leadership Program</span>
         <span class="when">Jul 2019 – Jul 2021</span>
-        <span class="org">GE HealthCare — rotations in full stack, network architecture, technical product</span>
+        <span class="org">GE HealthCare — rotations in full stack engineering, network architecture, technical product management</span>
       </li>
     </ul>
 
@@ -271,7 +296,7 @@
       </div>
       <div>
         <h4>Frontend</h4>
-        <p>React, React Native, Vite, browser extensions</p>
+        <p>React, React Native, Vite, Chrome extensions</p>
       </div>
       <div>
         <h4>Backend</h4>
