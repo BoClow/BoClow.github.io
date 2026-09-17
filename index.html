@@ -11,15 +11,39 @@
 <meta property="og:description" content="Founding engineer who builds products from scratch. Browser extensions, search products, and production AI integration.">
 <meta property="og:url" content="https://boclow.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://boclow.github.io/og.png">
+<meta property="og:image" content="https://boclow.github.io/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Bo Clow — Senior Software Engineer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bo Clow — Senior Software Engineer">
 <meta name="twitter:description" content="Founding engineer who builds products from scratch.">
-<meta name="twitter:image" content="https://boclow.github.io/og.png">
+<meta name="twitter:image" content="https://boclow.github.io/media/og.png">
 <meta name="theme-color" content="#0B0E11">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bo Clow",
+  "url": "https://boclow.github.io/",
+  "image": "https://boclow.github.io/media/og.png",
+  "jobTitle": "Senior Software Engineer",
+  "description": "Senior full-stack engineer with eight years of experience. Founding engineer at an early-stage real estate fintech startup, owning product lines from architecture through production.",
+  "email": "mailto:boclow34@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Diego",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "sameAs": ["https://linkedin.com/in/bo-clow"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" },
+    { "@type": "CollegeOrUniversity", "name": "University of Wisconsin" }
+  ],
+  "knowsAbout": ["TypeScript", "React", "Node.js", "Chrome Extensions", "Distributed Systems", "LLM integration"]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.92em%22%20font-size%3D%2288%22%3E%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -93,6 +117,16 @@
   .kit div h4{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--accent);margin:0 0 6px;}
   .kit div h4::before{content:"› ";}
 
+  .shots{display:flex;gap:10px;overflow-x:auto;margin:0 0 16px;padding-bottom:4px;}
+  .shots button{padding:0;border:1px solid var(--rule);border-radius:6px;background:var(--surface);cursor:zoom-in;line-height:0;flex:none;}
+  .shots button:hover,.shots button:focus-visible{border-color:var(--accent);}
+  .shots img{display:block;height:120px;width:auto;border-radius:5px;}
+  .shots--tall img{height:190px;}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:28px;z-index:100;cursor:zoom-out;}
+  .lightbox.is-open{display:flex;}
+  .lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.5);}
+  @media (max-width:520px){.shots img{height:96px;} .shots--tall img{height:150px;}}
+
 </style>
 </head>
 <body>
@@ -145,6 +179,13 @@
           flags listings with an assumable loan and shows the rate, the monthly savings, and
           the lifetime interest savings against today's market, across all 50 states.
         </p>
+        <div class="shots">
+          <button type="button" data-full="media/vhs-1.png"><img src="media/vhs-1.png" alt="RetroRate VHS overlay on a listing page, showing the assumable loan rate and savings" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-3.png"><img src="media/vhs-3.png" alt="RetroRate VHS savings comparison of the current assumable loan against a new loan at today's rate" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-2.png"><img src="media/vhs-2.png" alt="RetroRate VHS map view highlighting nearby homes with assumable loans" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-4.png"><img src="media/vhs-4.png" alt="RetroRate VHS list of top assumable listings near a searched property" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-5.png"><img src="media/vhs-5.png" alt="RetroRate VHS assumption request flow for connecting with an agent" loading="lazy"></button>
+        </div>
         <p class="body">
           As the extension scaled to more traffic and more portals, calling out to a preview
           endpoint for every listing became a bottleneck, and fragile, since a portal changing
@@ -164,7 +205,11 @@
 
       <article class="project">
         <h3>AI-assisted loan verification, from data model to certificate</h3>
-        <p class="meta">Real estate fintech startup · 2026 · Concept to production</p>
+        <p class="meta">RetroRate · 2026 · Concept to production</p>
+        <div class="shots">
+          <button type="button" data-full="media/vol-1.png"><img src="media/vol-1-thumb.png" alt="RetroRate Verification of Loan certificate showing verified loan terms, confidence breakdown, and sources checked (sample data)" loading="lazy"></button>
+          <button type="button" data-full="media/vol-2.png"><img src="media/vol-2-thumb.png" alt="RetroRate Verification of Loan activity log and audit trail (sample data)" loading="lazy"></button>
+        </div>
         <p class="body">
           Verifying that a listing's loan is actually assumable, and at what rate, used to mean
           trusting whatever the seller's agent claimed. This product turns that claim into
@@ -184,7 +229,10 @@
 
       <article class="project">
         <h3>MLS partner integrations, from signed deal to live product</h3>
-        <p class="meta">Real estate fintech startup · 2025–2026 · Concept to production</p>
+        <p class="meta">RetroRate · 2025–2026 · Concept to production</p>
+        <div class="shots shots--tall">
+          <button type="button" data-full="media/email-example.png"><img src="media/email-1-thumb.png" alt="Listing alert email sent to an agent, showing the assumable rate, monthly savings, and the listing's loan terms" loading="lazy"></button>
+        </div>
         <p class="body">
           Every MLS partnership we signed was a new revenue relationship, and each came with
           its own login flow, its own listing feed, and its own rules about what we were
@@ -200,7 +248,10 @@
 
       <article class="project">
         <h3>Turning a listing classifier into a paid agent product</h3>
-        <p class="meta">Real estate fintech startup · 2025–2026 · Concept to production</p>
+        <p class="meta">RetroRate · 2025–2026 · Concept to production</p>
+        <div class="shots">
+          <button type="button" data-full="media/details-1.png"><img src="media/details-1.png" alt="Listing detail page with the assumable-mortgage phrase detected and highlighted in the MLS remarks, alongside the assumption savings breakdown" loading="lazy"></button>
+        </div>
         <p class="body">
           Most MLS listings never mention that their loan is assumable, agents don't know to
           say it, or don't know it matters. I built a model that reads MLS remarks and flags
@@ -217,7 +268,10 @@
 
       <article class="project">
         <h3>Taking search and maps from a prototype to the core product</h3>
-        <p class="meta">Real estate fintech startup · 2025–2026 · Proof of concept to production</p>
+        <p class="meta">RetroRate · 2025–2026 · Proof of concept to production</p>
+        <div class="shots">
+          <button type="button" data-full="media/app-example.png"><img src="media/app-example.png" alt="RetroRate web app showing the split map and list search view, with assumable listings pinned on the map and result cards showing rate, monthly savings and loan terms" loading="lazy"></button>
+        </div>
         <p class="body">
           The map and search experience is the product most users touch first, and it started
           as a Google Maps proof of concept. I took it to production: split list/map views,
@@ -242,6 +296,38 @@
           the room.
         </p>
         <p class="stack">C# · .NET · REST</p>
+      </article>
+
+      <article class="project">
+        <h3>An offline-first field app, and the GraphQL layer underneath it</h3>
+        <p class="meta">GE HealthCare · 2021–2025 · Tech lead</p>
+        <p class="body">
+          FX2 is a business-critical app for field teams who can't count on having a
+          connection, so it had to work fully offline across iOS, Android and Windows. I was
+          tech lead from stack exploration and proof of concept through delivery, and built its
+          Apollo GraphQL API layer from the ground up, serving more than 10,000 users globally.
+          That layer was also the company's first GraphQL integration with its major CRM
+          systems, so part of the job was getting teams who had only ever exposed REST to agree
+          on a new contract. Outside the app itself I maintained the cloud infrastructure behind
+          several critical app suites, migrated an AWS-hosted application to cut its monthly
+          cost by more than 60%, and mentored two engineers delivering features alongside me.
+        </p>
+        <p class="stack">GraphQL (Apollo) · React Native · React · Java · AWS · Docker</p>
+      </article>
+
+      <article class="project">
+        <h3>An automation practice that saved $1M a year</h3>
+        <p class="meta">GE HealthCare · 2019–2021 · Digital Technology Leadership Program</p>
+        <p class="body">
+          The leadership program rotated me through technical product management, full stack
+          engineering and network architecture. In the product rotation I kept hitting the same
+          manual processes duplicated across teams, so I pioneered an automation foundry to
+          attack them and built the internal site that got other teams actually using it. The
+          projects it delivered saved more than 20,000 hours and about $1 million annually. A
+          later rotation had me testing and deploying firmware updates to thousands of live
+          devices across active hospitals.
+        </p>
+        <p class="stack">React · Angular · Java · SQL · Jenkins</p>
       </article>
 
     </div>
@@ -327,6 +413,40 @@
 
 </main>
 
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  (function(){
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    var group = [], index = 0;
+
+    function show(i){
+      index = (i + group.length) % group.length;
+      var btn = group[index];
+      img.src = btn.getAttribute('data-full');
+      img.alt = btn.querySelector('img').alt;
+    }
+    function open(btn){
+      group = Array.prototype.slice.call(btn.closest('.shots').querySelectorAll('button'));
+      show(group.indexOf(btn));
+      box.classList.add('is-open');
+    }
+    function close(){ box.classList.remove('is-open'); img.src = ''; }
+
+    document.querySelectorAll('.shots button').forEach(function(btn){
+      btn.addEventListener('click', function(){ open(btn); });
+    });
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){
+      if(!box.classList.contains('is-open')) return;
+      if(e.key === 'Escape') close();
+      else if(e.key === 'ArrowRight'){ e.preventDefault(); show(index + 1); }
+      else if(e.key === 'ArrowLeft'){ e.preventDefault(); show(index - 1); }
+    });
+  })();
+</script>
 
 </body>
 </html>
