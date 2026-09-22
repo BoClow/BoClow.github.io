@@ -3,417 +3,548 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bo Clow — Senior Software Engineer</title>
-<meta name="description" content="Senior full-stack engineer. Founding engineer who builds products from scratch — browser extensions, search products, and production AI integration.">
+<title>Bo Clow — I build products, not just features</title>
+<meta name="description" content="Bo Clow, full-stack engineer in San Diego. Founding engineer who builds products from a blank repo to production.">
+<meta name="theme-color" content="#FFFDF8">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://boclow.com/">
 <meta property="og:site_name" content="Bo Clow">
-<meta property="og:title" content="Bo Clow — Senior Software Engineer">
-<meta property="og:description" content="Founding engineer who builds products from scratch. Browser extensions, search products, and production AI integration.">
-<meta property="og:url" content="https://boclow.com/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://boclow.com/">
+<meta property="og:title" content="Bo Clow — I build products, not just features">
+<meta property="og:description" content="Full-stack engineer in San Diego. Founding engineer who builds products from a blank repo to production.">
 <meta property="og:image" content="https://boclow.com/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Bo Clow — Senior Software Engineer">
+<meta property="og:image:alt" content="Bo Clow — I build products, not just features. Full-stack engineer in San Diego, open to work.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bo Clow — Senior Software Engineer">
-<meta name="twitter:description" content="Founding engineer who builds products from scratch.">
+<meta name="twitter:title" content="Bo Clow — I build products, not just features">
+<meta name="twitter:description" content="Full-stack engineer in San Diego. Founding engineer who builds products from a blank repo to production.">
 <meta name="twitter:image" content="https://boclow.com/media/og.png">
-<meta name="theme-color" content="#0B0E11">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2224%22%20fill%3D%22%23FFD23F%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2266%22%20font-size%3D%2250%22%20font-family%3D%22Arial%22%20font-weight%3D%22900%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%22-3%22%20fill%3D%22%23111%22%3Ebo%3Ctspan%20fill%3D%22%23FF6B4A%22%3E.%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Bo Clow",
   "url": "https://boclow.com/",
-  "image": "https://boclow.com/media/og.png",
+  "image": "https://boclow.com/media/me.jpeg",
   "jobTitle": "Senior Software Engineer",
   "description": "Senior full-stack engineer with eight years of experience. Founding engineer at an early-stage real estate fintech startup, owning product lines from architecture through production.",
   "email": "mailto:boclow34@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San Diego",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
+  "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" },
   "sameAs": ["https://linkedin.com/in/bo-clow"],
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" },
     { "@type": "CollegeOrUniversity", "name": "University of Wisconsin" }
   ],
-  "knowsAbout": ["TypeScript", "React", "Node.js", "Chrome Extensions", "Distributed Systems", "LLM integration"]
+  "knowsAbout": ["TypeScript", "React", "Node.js", "Chrome Extensions", "GraphQL", "LLM integration"]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.92em%22%20font-size%3D%2288%22%3E%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB%3C%2Ftext%3E%3C%2Fsvg%3E">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
 <style>
-
   :root{
-    --ground:#0B0E11; --surface:#12161A; --ink:#DCE3EA; --muted:#7E8A96;
-    --rule:#1F262D; --accent:#93C9AC; --accent-dim:#1F3128;
-    --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
-    --shell:54rem; --measure:68ch;
+    --bg:#FFFDF8; --ink:#111; --muted:#5E5A52; --rule:#E6E1D6;
+    --blue:#2B4BFF; --yellow:#FFD23F; --coral:#FF6B4A; --sand:#EDE7DA;
+    --display:"Bricolage Grotesque",system-ui,sans-serif; --sans:Inter,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
-    --ground:#F7F9FB; --surface:#FFFFFF; --ink:#111820; --muted:#5A6774;
-    --rule:#DCE3EA; --accent:#2F6B4F; --accent-dim:#DEEBE3;}}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+  .shell{max-width:72rem;margin:0 auto;padding:0 24px}
 
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  img{max-width:100%;}
-  a{color:inherit;}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
-  .shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:24px;}
-  .masthead{position:sticky;top:0;z-index:10;background:var(--ground);border-bottom:1px solid var(--rule);}
-  .masthead .shell{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-block:14px;}
-  .actions{display:flex;flex-wrap:wrap;gap:10px;}
-  .work{display:flex;flex-direction:column;}
-  .roles{list-style:none;margin:0;padding:0;}
-  .roles li{display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline;padding-block:16px;border-bottom:1px solid var(--rule);}
-  .roles .org{grid-column:1;color:var(--muted);font-size:.95rem;}
-  .roles .when{grid-column:2;grid-row:1;font-family:var(--mono);font-size:.74rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;}
-  .kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px 32px;padding-top:24px;}
-  .kit div p{margin:0;font-size:.95rem;}
-  .foot-links{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:.78rem;}
-  .foot-links a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
-  .foot-links a:hover{border-bottom-color:var(--accent);}
-  footer{border-top:1px solid var(--rule);padding-block:36px 56px;}
+  nav.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:500}
+  nav.top .logo{font-family:var(--display);font-weight:800;font-size:24px;text-decoration:none}
+  nav.top .logo span{color:var(--coral)}
+  nav.top .links a{margin-left:22px;text-decoration:none}
+  nav.top .links a:hover{text-decoration:underline;text-underline-offset:4px}
+
+  .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;padding:40px 0 30px}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3.2rem,9.5vw,7.4rem);line-height:.9;letter-spacing:-.045em;margin:0}
+  .hero h1 mark{background:var(--yellow);color:inherit;padding:0 .08em;border-radius:.08em}
+  .badge{display:block;text-decoration:none;background:var(--blue);border-radius:22px;transform:rotate(2deg);position:relative;padding:12px;box-shadow:0 18px 40px rgba(43,75,255,.25);transition:transform .2s,box-shadow .2s}
+  .badge:hover{transform:rotate(0) translateY(-4px);box-shadow:0 24px 48px rgba(43,75,255,.32)}
+  .badge img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+  .badge .where{position:absolute;right:-14px;bottom:34px;background:var(--yellow);color:var(--ink);font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;transform:rotate(-4deg);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+  .sticker{position:absolute;top:-18px;left:-22px;background:var(--coral);color:#fff;font-family:var(--display);font-weight:700;padding:10px 16px;border-radius:999px;transform:rotate(-8deg);font-size:15px;box-shadow:0 6px 14px rgba(0,0,0,.15)}
+  .intro{max-width:42rem;font-size:20px;margin:10px 0 0}
+  .intro strong{font-weight:600}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+  .btn{display:inline-block;font-weight:600;text-decoration:none;padding:12px 20px;border-radius:999px;border:2px solid var(--ink);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn--solid{background:var(--ink);color:var(--bg)}
+
+  .marquee{background:var(--ink);color:var(--bg);font-family:var(--display);font-weight:700;font-size:26px;white-space:nowrap;overflow:hidden;padding:14px 0;margin-top:70px}
+  .marquee div{display:inline-block;animation:scroll 40s linear infinite}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5.5vw,3.6rem);letter-spacing:-.035em;line-height:1;margin:100px 0 32px}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .card{border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+  .card.wide{grid-column:span 2}
+  .card .n{font-family:var(--display);font-weight:700;font-size:14px;opacity:.7;letter-spacing:.01em}
+  .card h3{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+  .card p{margin:0}
+  .card .sum{max-width:44ch}
+  .stat{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,7vw,5rem);line-height:.9;letter-spacing:-.04em}
+  .stack{font-size:13px;font-weight:500;opacity:.75;margin-top:auto !important}
+  .c-yellow{background:var(--yellow)}
+  .c-blue{background:var(--blue);color:#fff}
+  .c-coral{background:var(--coral);color:#fff}
+  .c-sand{background:var(--sand)}
+  .c-ink{background:var(--ink);color:#fff}
+  .c-outline{background:transparent;border:2px solid var(--ink)}
+
+  .feature{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center}
+  .feature .lead-shot{transform:rotate(-3deg);border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.2)}
+
+  .shots{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 6px}
+  .shots button{padding:0;border:0;background:none;cursor:zoom-in;flex:none;border-radius:10px;transition:transform .2s}
+  .shots button:hover{transform:rotate(-2deg) translateY(-3px)}
+  .shots img{height:110px;width:auto;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+  .shots--tall img{height:170px}
+
+  details{border-top:1.5px solid currentColor;padding-top:12px}
+  details summary{font-weight:600;list-style:none;display:flex;align-items:center;gap:8px;width:max-content}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"";width:7px;height:7px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+  details[open] summary::after{transform:translateY(2px) rotate(-135deg)}
+  details .story{padding-top:12px;display:flex;flex-direction:column;gap:12px;max-width:68ch}
+  .ext{display:flex;flex-wrap:wrap;gap:16px;font-weight:600}
+  .ext a::after{content:" ↗"}
+
+  .beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .beliefs div{border-top:4px solid var(--ink);padding-top:16px}
+  .beliefs b{font-family:var(--display);font-size:24px;line-height:1.1;display:block;margin-bottom:8px;letter-spacing:-.01em}
+
+  .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--ink);border:2px solid var(--ink);border-radius:22px;overflow:hidden}
+  .timeline div{padding:18px 14px;background:var(--bg);display:flex;flex-direction:column;gap:4px}
+  .timeline div:last-child{background:var(--yellow)}
+  @media (max-width:1100px){.timeline{grid-template-columns:repeat(3,1fr)}}
+  .timeline small{font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+  .timeline div:last-child small{color:var(--ink);opacity:.7}
+  .timeline b{font-family:var(--display);font-size:20px;line-height:1.1}
+  .timeline span{font-size:15px}
+  .timeline a{font-weight:600}
+  .jump{display:inline-block;font-style:normal;transform-origin:50% 100%;animation:jump-around 4s ease-in-out infinite}
+  .timeline div:hover .jump{animation:jump-hover 1.4s ease-in-out infinite}
+  .timeline div{position:relative}
+  .bee{display:inline-block;font-style:normal;animation:bee-buzz 4s linear infinite}
+  .timeline div:hover .bee{animation:bee-hover 2.6s linear infinite}
+  @keyframes bee-buzz{
+    0%,50%{translate:0 0;rotate:0deg}
+    50.0%{translate:-0.0px 0.0px;rotate:0.0deg}
+    51.04%{translate:-0.1px -0.0px;rotate:0.2deg}
+    52.08%{translate:-0.3px -0.2px;rotate:0.7deg}
+    53.12%{translate:-0.6px -0.3px;rotate:0.7deg}
+    54.17%{translate:-1.1px -0.6px;rotate:0.0deg}
+    55.21%{translate:-1.7px -0.9px;rotate:-1.1deg}
+    56.25%{translate:-2.4px -1.2px;rotate:-1.9deg}
+    57.29%{translate:-3.2px -1.6px;rotate:-1.6deg}
+    58.33%{translate:-4.0px -2.1px;rotate:-0.0deg}
+    59.38%{translate:-4.9px -2.6px;rotate:2.0deg}
+    60.42%{translate:-5.8px -3.2px;rotate:3.0deg}
+    61.46%{translate:-6.7px -3.8px;rotate:2.3deg}
+    62.5%{translate:-7.5px -4.6px;rotate:0.0deg}
+    63.54%{translate:-8.2px -5.5px;rotate:-2.7deg}
+    64.58%{translate:-8.7px -6.4px;rotate:-4.0deg}
+    65.62%{translate:-8.9px -7.3px;rotate:-2.9deg}
+    66.67%{translate:-9.0px -8.0px;rotate:-0.0deg}
+    67.71%{translate:-8.8px -8.4px;rotate:3.2deg}
+    68.75%{translate:-8.2px -8.6px;rotate:4.6deg}
+    69.79%{translate:-7.4px -8.6px;rotate:3.3deg}
+    70.83%{translate:-6.3px -8.6px;rotate:0.0deg}
+    71.88%{translate:-5.0px -8.6px;rotate:-3.5deg}
+    72.92%{translate:-3.4px -8.9px;rotate:-5.0deg}
+    73.96%{translate:-1.8px -9.4px;rotate:-3.5deg}
+    75.0%{translate:-0.0px -10.0px;rotate:-0.0deg}
+    76.04%{translate:0.8px -10.5px;rotate:3.5deg}
+    77.08%{translate:1.5px -10.7px;rotate:5.0deg}
+    78.12%{translate:2.2px -10.5px;rotate:3.5deg}
+    79.17%{translate:2.8px -9.9px;rotate:0.0deg}
+    80.21%{translate:3.3px -9.1px;rotate:-3.3deg}
+    81.25%{translate:3.7px -8.1px;rotate:-4.6deg}
+    82.29%{translate:3.9px -7.3px;rotate:-3.2deg}
+    83.33%{translate:4.0px -6.6px;rotate:-0.0deg}
+    84.38%{translate:4.0px -6.0px;rotate:2.9deg}
+    85.42%{translate:3.8px -5.6px;rotate:4.0deg}
+    86.46%{translate:3.6px -5.2px;rotate:2.7deg}
+    87.5%{translate:3.3px -4.8px;rotate:0.0deg}
+    88.54%{translate:3.0px -4.3px;rotate:-2.3deg}
+    89.58%{translate:2.6px -3.7px;rotate:-3.0deg}
+    90.62%{translate:2.2px -3.1px;rotate:-2.0deg}
+    91.67%{translate:1.8px -2.5px;rotate:-0.0deg}
+    92.71%{translate:1.4px -2.0px;rotate:1.6deg}
+    93.75%{translate:1.1px -1.4px;rotate:1.9deg}
+    94.79%{translate:0.8px -1.0px;rotate:1.1deg}
+    95.83%{translate:0.5px -0.6px;rotate:0.0deg}
+    96.88%{translate:0.3px -0.4px;rotate:-0.7deg}
+    97.92%{translate:0.1px -0.2px;rotate:-0.7deg}
+    98.96%{translate:0.0px -0.0px;rotate:-0.2deg}
+    100.0%{translate:0.0px -0.0px;rotate:-0.0deg}
+  }
+  @keyframes bee-hover{
+    0.0%{translate:-0.0px 0.0px;rotate:0.0deg}
+    2.08%{translate:-0.1px -0.0px;rotate:0.3deg}
+    4.17%{translate:-0.3px -0.2px;rotate:0.6deg}
+    6.25%{translate:-0.6px -0.3px;rotate:0.1deg}
+    8.33%{translate:-1.1px -0.6px;rotate:-1.0deg}
+    10.42%{translate:-1.7px -0.9px;rotate:-1.5deg}
+    12.5%{translate:-2.4px -1.2px;rotate:-0.3deg}
+    14.58%{translate:-3.2px -1.6px;rotate:1.7deg}
+    16.67%{translate:-4.0px -2.1px;rotate:2.4deg}
+    18.75%{translate:-4.9px -2.6px;rotate:0.6deg}
+    20.83%{translate:-5.8px -3.2px;rotate:-2.2deg}
+    22.92%{translate:-6.7px -3.8px;rotate:-3.2deg}
+    25.0%{translate:-7.5px -4.6px;rotate:-1.1deg}
+    27.08%{translate:-8.2px -5.5px;rotate:2.4deg}
+    29.17%{translate:-8.7px -6.4px;rotate:3.9deg}
+    31.25%{translate:-8.9px -7.3px;rotate:1.6deg}
+    33.33%{translate:-9.0px -8.0px;rotate:-2.5deg}
+    35.42%{translate:-8.8px -8.4px;rotate:-4.5deg}
+    37.5%{translate:-8.2px -8.6px;rotate:-2.1deg}
+    39.58%{translate:-7.4px -8.6px;rotate:2.5deg}
+    41.67%{translate:-6.3px -8.6px;rotate:4.8deg}
+    43.75%{translate:-5.0px -8.6px;rotate:2.6deg}
+    45.83%{translate:-3.4px -8.9px;rotate:-2.3deg}
+    47.92%{translate:-1.8px -9.4px;rotate:-5.0deg}
+    50.0%{translate:-0.0px -10.0px;rotate:-2.9deg}
+    52.08%{translate:0.8px -10.5px;rotate:1.9deg}
+    54.17%{translate:1.5px -10.7px;rotate:4.9deg}
+    56.25%{translate:2.2px -10.5px;rotate:3.2deg}
+    58.33%{translate:2.8px -9.9px;rotate:-1.5deg}
+    60.42%{translate:3.3px -9.1px;rotate:-4.6deg}
+    62.5%{translate:3.7px -8.1px;rotate:-3.3deg}
+    64.58%{translate:3.9px -7.3px;rotate:1.0deg}
+    66.67%{translate:4.0px -6.6px;rotate:4.1deg}
+    68.75%{translate:4.0px -6.0px;rotate:3.2deg}
+    70.83%{translate:3.8px -5.6px;rotate:-0.6deg}
+    72.92%{translate:3.6px -5.2px;rotate:-3.5deg}
+    75.0%{translate:3.3px -4.8px;rotate:-2.9deg}
+    77.08%{translate:3.0px -4.3px;rotate:0.3deg}
+    79.17%{translate:2.6px -3.7px;rotate:2.7deg}
+    81.25%{translate:2.2px -3.1px;rotate:2.4deg}
+    83.33%{translate:1.8px -2.5px;rotate:-0.0deg}
+    85.42%{translate:1.4px -2.0px;rotate:-1.9deg}
+    87.5%{translate:1.1px -1.4px;rotate:-1.7deg}
+    89.58%{translate:0.8px -1.0px;rotate:-0.1deg}
+    91.67%{translate:0.5px -0.6px;rotate:1.0deg}
+    93.75%{translate:0.3px -0.4px;rotate:0.9deg}
+    95.83%{translate:0.1px -0.2px;rotate:0.1deg}
+    97.92%{translate:0.0px -0.0px;rotate:-0.2deg}
+    100.0%{translate:0.0px -0.0px;rotate:-0.0deg}
+  }
+  .jump--late,.timeline div:hover .jump--late{animation-delay:.15s;margin-left:2px}
+  @keyframes jump-hover{
+    0%,100%{transform:translateY(0) scale(1)}
+    12%{transform:translateY(0) scale(1.12,.88)}
+    32%{transform:translateY(-10px) scale(.95,1.06) rotate(-8deg)}
+    50%{transform:translateY(0) scale(1.08,.92)}
+    66%{transform:translateY(-6px) rotate(8deg)}
+    82%{transform:translateY(0) scale(1)}
+  }
+  @keyframes jump-around{
+    0%,70%,100%{transform:translateY(0) scale(1)}
+    73%{transform:translateY(0) scale(1.15,.85)}
+    78%{transform:translateY(-9px) scale(.95,1.08) rotate(-8deg)}
+    83%{transform:translateY(0) scale(1.1,.9)}
+    88%{transform:translateY(-6px) rotate(8deg)}
+    93%{transform:translateY(0) scale(1)}
+  }
+
+  .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .hobby{border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:8px;position:relative;transition:transform .2s}
+  .hobby:nth-child(odd){transform:rotate(-1deg)}
+  .hobby:nth-child(even){transform:rotate(1deg)}
+  .hobby:hover{transform:rotate(0) translateY(-4px)}
+  .hobby b{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;line-height:1.05}
+  .hobby p{margin:0}
+  .hobby .emo{font-size:44px;line-height:1;display:inline-block;width:max-content;transform-origin:50% 90%}
+  .hobby:hover .emo{animation:emo-wiggle .6s ease-in-out}
+  @keyframes emo-wiggle{25%{transform:rotate(-12deg) scale(1.1)}50%{transform:rotate(10deg) scale(1.1)}75%{transform:rotate(-4deg)}}
+  .hobby-tag{position:absolute;top:-14px;right:18px;background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;padding:7px 13px;border-radius:999px;transform:rotate(4deg)}
+  .kit{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .kit div{background:var(--sand);border-radius:18px;padding:22px}
+  .kit h4{font-family:var(--display);font-weight:700;font-size:18px;margin:0 0 6px}
+  .kit p{margin:0;font-size:15.5px}
+
+  footer{margin-top:110px;background:var(--blue);color:#fff;padding:80px 0 60px}
+  footer h2{margin:0 0 14px;color:#fff;font-size:clamp(2.8rem,8vw,5.5rem)}
+  footer p{margin:0 0 30px;font-size:19px;opacity:.9}
+  footer .btn{border-color:#fff}
+  footer .btn--solid{background:#fff;color:var(--blue)}
+  footer .fine{margin-top:60px;font-size:14px;opacity:.75}
+
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:28px;z-index:100;cursor:zoom-out}
+  .lightbox.is-open{display:flex}
+  .lightbox img{max-width:100%;max-height:100%;border-radius:10px}
+
+  @media (max-width:860px){
+    .hero,.feature,.beliefs,.kit,.hobbies{grid-template-columns:1fr}
+    .badge{max-width:280px}
+    .grid{grid-template-columns:1fr}
+    .card.wide{grid-column:auto}
+    .timeline{grid-template-columns:1fr}
+  }
   @media (max-width:520px){
-    body{font-size:16px;} .hero{padding-block:44px 36px !important;}
-    .roles li{grid-template-columns:1fr;} .roles .when{grid-column:1;grid-row:auto;}
+    .shell{padding:0 16px}
+    nav.top .links a{margin-left:14px}
+    .card{padding:22px}
+    .intro{font-size:18px}
+    .hero{gap:36px}
+    .marquee{font-size:21px;padding:12px 0;margin-top:48px}
+    .badge{max-width:200px;padding:8px;margin-left:8px;border-radius:18px}
+    .badge img{border-radius:11px}
+    .sticker{left:-8px}
+    .badge .where{right:-10px;bottom:-12px;font-size:14px}
+    .shots img{height:90px} .shots--tall img{height:140px}
   }
-  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
-
-  body{margin:0;background:radial-gradient(var(--rule) 1px,transparent 1px);background-size:22px 22px;background-color:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.62;}
-  .wordmark{font-family:var(--mono);font-weight:600;font-size:.95rem;text-decoration:none;}
-  .wordmark::before{content:"~/ ";color:var(--accent);}
-  .masthead nav{display:flex;gap:18px;font-family:var(--mono);font-size:.72rem;}
-  .masthead nav a{color:var(--muted);text-decoration:none;}
-  .masthead nav a::before{content:"/";color:var(--accent-dim);margin-right:4px;}
-  .masthead nav a:hover{color:var(--accent);}
-  .hero{padding-block:60px 46px;}
-  .hero h1{font-family:var(--mono);font-weight:500;font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.22;letter-spacing:-.02em;margin:0 0 22px;text-wrap:balance;}
-  .hero h1 em{font-style:normal;color:var(--accent);}
-  .lede{font-size:1.08rem;max-width:var(--measure);margin:0 0 22px;color:var(--ink);}
-  .status{font-family:var(--mono);font-size:.76rem;color:var(--muted);margin:0 0 26px;max-width:var(--measure);}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:9px;box-shadow:0 0 0 3px var(--accent-dim);}
-  .btn{display:inline-block;font-family:var(--mono);font-size:.76rem;text-decoration:none;padding:9px 14px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:3px;}
-  .btn:hover{border-color:var(--accent);color:var(--accent);}
-  .btn--primary{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
-  section{padding-block:8px 50px;}
-  .section-head{display:flex;align-items:baseline;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--rule);}
-  .section-head h2{font-family:var(--mono);font-weight:500;font-size:.75rem;letter-spacing:.02em;color:var(--muted);margin:0;}
-  .section-head h2::before{content:"// ";color:var(--accent);}
-  .project{padding-block:28px;border-bottom:1px solid var(--rule);}
-  .project h3{font-family:var(--mono);font-weight:600;font-size:1.18rem;line-height:1.35;margin:0 0 8px;color:var(--ink);text-wrap:balance;}
-  .project .meta{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0 0 14px;}
-  .project p.body{margin:0 0 14px;max-width:var(--measure);}
-  .stack{font-family:var(--mono);font-size:.71rem;color:var(--accent);margin:0;opacity:.85;}
-  .links{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:.75rem;margin:0 0 14px;}
-  .links a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-dim);padding-bottom:1px;}
-  .links a:hover{border-bottom-color:var(--accent);}
-  .links a::after{content:" ↗";opacity:.65;}
-  .roles .title{font-family:var(--mono);font-weight:600;font-size:.98rem;}
-  .kit div h4{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--accent);margin:0 0 6px;}
-  .kit div h4::before{content:"› ";}
-
-  .shots{display:flex;gap:10px;overflow-x:auto;margin:0 0 16px;padding-bottom:4px;}
-  .shots button{padding:0;border:1px solid var(--rule);border-radius:6px;background:var(--surface);cursor:zoom-in;line-height:0;flex:none;}
-  .shots button:hover,.shots button:focus-visible{border-color:var(--accent);}
-  .shots img{display:block;height:120px;width:auto;border-radius:5px;}
-  .shots--tall img{height:190px;}
-  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:28px;z-index:100;cursor:zoom-out;}
-  .lightbox.is-open{display:flex;}
-  .lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.5);}
-  @media (max-width:520px){.shots img{height:96px;} .shots--tall img{height:150px;}}
-
+  @media (pointer:fine){
+    html,body{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M5%203%20L5%2025%20L11%2019.5%20L15%2028.5%20L19.5%2026.5%20L15.5%2018%20L23%2018%20Z%22%20transform%3D%22translate%282.5%202.5%29%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M5%203%20L5%2025%20L11%2019.5%20L15%2028.5%20L19.5%2026.5%20L15.5%2018%20L23%2018%20Z%22%20fill%3D%22%23FFD23F%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") 5 3,auto}
+    a,button,summary,.btn{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M5%203%20L5%2025%20L11%2019.5%20L15%2028.5%20L19.5%2026.5%20L15.5%2018%20L23%2018%20Z%22%20transform%3D%22translate%282.5%202.5%29%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M5%203%20L5%2025%20L11%2019.5%20L15%2028.5%20L19.5%2026.5%20L15.5%2018%20L23%2018%20Z%22%20fill%3D%22%23FF6B4A%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") 5 3,pointer}
+    .shots button,.shots-lead{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%3Ccircle%20cx%3D%2221.5%22%20cy%3D%2221.5%22%20r%3D%2216%22%20fill%3D%22%23111%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2219%22%20r%3D%2216%22%20fill%3D%22%23FFD23F%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M19%2011v16M11%2019h16%22%20stroke%3D%22%23111%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E") 19 19,zoom-in}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
+<div class="shell">
+  <nav class="top" aria-label="Primary">
+    <a class="logo" href="#top">bo<span>.</span></a>
+    <span class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></span>
+  </nav>
 
-<header class="masthead">
-  <div class="shell">
-    <a class="wordmark" href="#top">Bo Clow</a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <h1>I build<br><mark>products,</mark><br>not just<br>features.</h1>
+      </div>
+      <a class="badge" href="#contact" aria-label="Open to work. Get in touch with Bo">
+        <img src="media/me.jpeg" width="706" height="883" alt="Bo Clow smiling in front of a wall of green plants">
+        <span class="sticker">open to work ✦</span>
+        <span class="where">📍 San Diego, CA</span>
+      </a>
+    </section>
 
-<main id="top">
-
-  <div class="shell hero">
-    <h1>Engineer who builds products <em>from scratch</em>.</h1>
-    <p class="lede">
-      I'm Bo — a senior full-stack engineer with eight years of experience. Most recently
-      I was the founding engineer at an early-stage real estate fintech startup, where I
-      owned entire product lines from architecture through production.
-    </p>
-    <p class="status">
-      <span class="dot" aria-hidden="true"></span>
-      San Diego, CA · Open to senior engineering roles
-    </p>
-    <div class="actions">
-      <a class="btn btn--primary" href="./Bo_Clow_Resume.pdf">Download résumé (PDF)</a>
+    <p class="intro">Hi! I'm Bo, a senior full-stack engineer with eight years of experience. Most recently I was the <strong>founding engineer</strong> at an early-stage real estate fintech startup, where I owned entire product lines from architecture through production. Before that, I spent over six years at <strong>GE HealthCare</strong> building apps for field teams who couldn't count on a connection. I'm now looking for my next role where I can own a product end to end.</p>
+    <div class="cta-row">
+      <a class="btn btn--solid" href="./Bo_Clow_Resume.pdf">Résumé (PDF)</a>
       <a class="btn" href="mailto:boclow34@gmail.com">Email me</a>
       <a class="btn" href="https://linkedin.com/in/bo-clow" rel="me noopener" target="_blank">LinkedIn</a>
     </div>
-  </div>
+  </main>
+</div>
 
-  <section id="work" class="shell">
-    <div class="section-head"><h2>Selected work</h2></div>
+<div class="marquee" aria-hidden="true"><div>TypeScript ✦ React ✦ Node ✦ Chrome Extensions ✦ GraphQL ✦ Gemini ✦ Vertex AI ✦ GCP ✦ AWS ✦ C# / .NET ✦ MongoDB ✦ TypeScript ✦ React ✦ Node ✦ Chrome Extensions ✦ GraphQL ✦ Gemini ✦ Vertex AI ✦ GCP ✦ AWS ✦ C# / .NET ✦ MongoDB ✦&nbsp;</div></div>
 
-    <div class="work">
+<div class="shell">
+  <section id="work">
+    <h2>Stuff I've made.</h2>
+    <div class="grid">
 
-      <article class="project">
-        <h3>RetroRate VHS — surfacing hidden assumable mortgages while you browse</h3>
-        <p class="meta">RetroRate · 2025–2026 · Owned end to end · Live on the Chrome Web Store</p>
-        <p class="body">
-          Assumable mortgages, FHA and VA loans a buyer can take over at the seller's
-          original rate, are invisible on every major listing portal, which means millions
-          of homes carrying a 3% loan look identical to everything else on the market. VHS
-          surfaces them in place: as you browse Zillow, Redfin, Realtor.com and Compass, it
-          flags listings with an assumable loan and shows the rate, the monthly savings, and
-          the lifetime interest savings against today's market, across all 50 states.
-        </p>
-        <div class="shots">
-          <button type="button" data-full="media/vhs-1.png"><img src="media/vhs-1.png" alt="RetroRate VHS overlay on a listing page, showing the assumable loan rate and savings" loading="lazy"></button>
-          <button type="button" data-full="media/vhs-3.png"><img src="media/vhs-3.png" alt="RetroRate VHS savings comparison of the current assumable loan against a new loan at today's rate" loading="lazy"></button>
-          <button type="button" data-full="media/vhs-2.png"><img src="media/vhs-2.png" alt="RetroRate VHS map view highlighting nearby homes with assumable loans" loading="lazy"></button>
-          <button type="button" data-full="media/vhs-4.png"><img src="media/vhs-4.png" alt="RetroRate VHS list of top assumable listings near a searched property" loading="lazy"></button>
-          <button type="button" data-full="media/vhs-5.png"><img src="media/vhs-5.png" alt="RetroRate VHS assumption request flow for connecting with an agent" loading="lazy"></button>
+      <article class="card wide c-yellow">
+        <div class="feature">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span class="n">01 — RetroRate VHS · 2025–26</span>
+            <h3>A Chrome extension that finds hidden 3% mortgages on Zillow.</h3>
+            <p class="sum">Assumable loans are invisible on every major listing portal. VHS flags them while you browse Zillow, Redfin, Realtor.com and Compass, and shows the rate and what you'd save, across all 50 states. Owned end to end, live on the Chrome Web Store.</p>
+          </div>
+          <button type="button" class="shots-lead" data-full="media/vhs-1.png" style="padding:0;border:0;background:none"><img class="lead-shot" src="media/vhs-1.png" width="1280" height="800" alt="RetroRate VHS overlay on a listing page, showing the assumable loan rate and savings"></button>
         </div>
-        <p class="body">
-          As the extension scaled to more traffic and more portals, calling out to a preview
-          endpoint for every listing became a bottleneck, and fragile, since a portal changing
-          its page could break it outright. I rebuilt it to read each portal's own
-          listing data directly as it loaded, which fixed both: faster, and resilient to
-          redesigns that used to take it down overnight. From there I took it national, solved
-          the throughput and race-condition problems that came with checking thousands of
-          listings at once without hammering our backend, and built the internal dashboard we
-          used to see how people were actually using it.
-        </p>
-        <p class="links">
-          <a href="https://chromewebstore.google.com/detail/mlaiomcndafjggoeafhegcdpghplmbmg" rel="noopener" target="_blank">Chrome Web Store</a>
-          <a href="https://www.retrorate.com/product/vhs/" rel="noopener" target="_blank">Product page</a>
-        </p>
+        <div class="shots">
+          <button type="button" data-full="media/vhs-3.png"><img src="media/vhs-3.png" width="1280" height="800" alt="RetroRate VHS savings comparison against a new loan at today's rate" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-2.png"><img src="media/vhs-2.png" width="1280" height="800" alt="RetroRate VHS map view highlighting nearby homes with assumable loans" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-4.png"><img src="media/vhs-4.png" width="1280" height="800" alt="RetroRate VHS list of top assumable listings near a searched property" loading="lazy"></button>
+          <button type="button" data-full="media/vhs-5.png"><img src="media/vhs-5.png" width="1280" height="800" alt="RetroRate VHS assumption request flow for connecting with an agent" loading="lazy"></button>
+        </div>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>Assumable mortgages, FHA and VA loans a buyer can take over at the seller's original rate, look identical to everything else on the market. VHS surfaces them in place, with the monthly and lifetime interest savings against today's rates.</p>
+            <p>As the extension scaled to more traffic and more portals, calling a preview endpoint for every listing became a bottleneck, and fragile, since a portal changing its page could break it outright. I rebuilt it to read each portal's own listing data as it loaded: faster, and resilient to redesigns that used to take it down overnight. From there I took it national, solved the throughput and race-condition problems of checking thousands of listings at once without hammering our backend, and built the internal dashboard we used to see how people actually used it.</p>
+            <p class="ext"><a href="https://chromewebstore.google.com/detail/mlaiomcndafjggoeafhegcdpghplmbmg" rel="noopener" target="_blank">Chrome Web Store</a><a href="https://www.retrorate.com/product/vhs/" rel="noopener" target="_blank">Product page</a></p>
+          </div>
+        </details>
         <p class="stack">TypeScript · React · Vite · Chrome Extensions (MV3) · Node</p>
       </article>
 
-      <article class="project">
-        <h3>AI-assisted loan verification, from data model to certificate</h3>
-        <p class="meta">RetroRate · 2026 · Concept to production</p>
+      <article class="card c-blue">
+        <span class="n">02 — Loan verification · 2026</span>
+        <h3>AI that reads mortgage statements, and a rules engine that keeps it honest.</h3>
+        <p class="sum">Agents upload a statement, the terms get extracted and cross-checked, and a public, confidence-scored certificate comes out the other end. It became a paid feature and a new revenue line.</p>
         <div class="shots">
-          <button type="button" data-full="media/vol-1.png"><img src="media/vol-1-thumb.png" alt="RetroRate Verification of Loan certificate showing verified loan terms, confidence breakdown, and sources checked (sample data)" loading="lazy"></button>
-          <button type="button" data-full="media/vol-2.png"><img src="media/vol-2-thumb.png" alt="RetroRate Verification of Loan activity log and audit trail (sample data)" loading="lazy"></button>
+          <button type="button" data-full="media/vol-1.png"><img src="media/vol-1-thumb.png" width="1450" height="653" alt="Verification of Loan certificate with verified terms, confidence breakdown, and sources (sample data)" loading="lazy"></button>
+          <button type="button" data-full="media/vol-2.png"><img src="media/vol-2-thumb.png" width="1450" height="675" alt="Verification of Loan activity log and audit trail (sample data)" loading="lazy"></button>
         </div>
-        <p class="body">
-          Verifying that a listing's loan is actually assumable, and at what rate, used to mean
-          trusting whatever the seller's agent claimed. This product turns that claim into
-          proof: an agent uploads a mortgage statement, Gemini and Vertex AI extract the terms
-          and reconcile them against a county-recorder cross-check, and a confidence-scored
-          certificate comes out the other end, with anomaly flags for anything that doesn't
-          line up. The certificate is public and shareable by QR code, and expires
-          automatically the moment a listing sells or goes off-market, so what's out there
-          always matches reality. The real challenge was trusting an AI extraction pipeline
-          enough to stand behind its output publicly, which meant building a rules-based
-          confidence engine and a full audit trail instead of taking the model's answer at
-          face value. Verification became a paid feature for listing agents, opening a new
-          revenue line for the business.
-        </p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>Verifying that a listing's loan is actually assumable, and at what rate, used to mean trusting whatever the seller's agent claimed. Gemini and Vertex AI extract the terms and reconcile them against a county-recorder cross-check, with anomaly flags for anything that doesn't line up. The certificate is shareable by QR code and expires automatically when a listing sells or goes off-market.</p>
+            <p>The real challenge was trusting an AI pipeline enough to stand behind its output publicly, which meant building a rules-based confidence engine and a full audit trail instead of taking the model's answer at face value.</p>
+          </div>
+        </details>
         <p class="stack">TypeScript · Node · Gemini · Vertex AI · GCP · Stripe</p>
       </article>
 
-      <article class="project">
-        <h3>MLS partner integrations, from signed deal to live product</h3>
-        <p class="meta">RetroRate · 2025–2026 · Concept to production</p>
+      <article class="card c-coral">
+        <span class="n">03 — MLS partner integrations · 2025–26</span>
+        <div class="stat">50k+</div>
+        <p class="sum">emails a month, from a system that turns each signed MLS partnership into a live product, with its own login, feed and compliance rules.</p>
         <div class="shots shots--tall">
-          <button type="button" data-full="media/email-example.png"><img src="media/email-1-thumb.png" alt="Listing alert email sent to an agent, showing the assumable rate, monthly savings, and the listing's loan terms" loading="lazy"></button>
+          <button type="button" data-full="media/email-example.png"><img src="media/email-1-thumb.png" width="563" height="683" alt="Listing alert email showing the assumable rate, monthly savings, and loan terms" loading="lazy"></button>
         </div>
-        <p class="body">
-          Every MLS partnership we signed was a new revenue relationship, and each came with
-          its own login flow, its own listing feed, and its own rules about what we were
-          allowed to say in an email. I built the system that turned a signed deal into a
-          running product: partner-specific OIDC login, a queue that turned raw MLS listings
-          into compliant, on-brand alert emails, and a per-partner rule catalog so each MLS
-          could have its own thresholds and disclosures. On top of the per-listing alerts I
-          set up an MLS-wide weekly digest campaign; together they now send more than 50,000
-          emails a month.
-        </p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>Every MLS partnership was a new revenue relationship, and each came with its own login flow, its own listing feed, and its own rules about what we were allowed to say in an email. I built partner-specific OIDC login, a queue that turned raw MLS listings into compliant, on-brand alert emails, and a per-partner rule catalog for thresholds and disclosures. On top of the per-listing alerts I set up an MLS-wide weekly digest campaign.</p>
+          </div>
+        </details>
         <p class="stack">TypeScript · Node · SendGrid · OIDC · Cron / Queues</p>
       </article>
 
-      <article class="project">
-        <h3>Turning a listing classifier into a paid agent product</h3>
-        <p class="meta">RetroRate · 2025–2026 · Concept to production</p>
+      <article class="card c-sand">
+        <span class="n">04 — Agent dashboard · 2025–26</span>
+        <h3>Turning a listing classifier into a paid agent product.</h3>
+        <p class="sum">A model that spots assumable-loan mentions in MLS remarks became the seed of a dashboard agents pay for, and a second revenue line.</p>
         <div class="shots">
-          <button type="button" data-full="media/details-1.png"><img src="media/details-1.png" alt="Listing detail page with the assumable-mortgage phrase detected and highlighted in the MLS remarks, alongside the assumption savings breakdown" loading="lazy"></button>
+          <button type="button" data-full="media/details-1.png"><img src="media/details-1-thumb.png" width="416" height="440" alt="Listing detail page with the assumable-mortgage phrase highlighted in the MLS remarks" loading="lazy"></button>
         </div>
-        <p class="body">
-          Most MLS listings never mention that their loan is assumable, agents don't know to
-          say it, or don't know it matters. I built a model that reads MLS remarks and flags
-          likely assumable mentions, then used that signal to promote and rank those listings
-          above the rest. That became the seed of an agent-facing dashboard where agents can
-          see how their listings are performing, claim and verify them, and see the savings
-          they're marketing to buyers. Wiring agent identity to MLS IDs so the dashboard
-          showed the right listings, and building the org-level upsell that turned one agent's
-          usage into a brokerage-wide sale, were what turned a detection feature into a second
-          revenue line.
-        </p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>Most MLS listings never mention that their loan is assumable; agents don't know to say it, or don't know it matters. I built a model that reads MLS remarks and flags likely mentions, then used that signal to promote and rank those listings. That grew into a dashboard where agents see how their listings perform, claim and verify them, and see the savings they're marketing to buyers.</p>
+            <p>Wiring agent identity to MLS IDs so the dashboard showed the right listings, and building the org-level upsell that turned one agent's usage into a brokerage-wide sale, were what turned a detection feature into revenue.</p>
+          </div>
+        </details>
         <p class="stack">TypeScript · Node · React · Stripe · MongoDB</p>
       </article>
 
-      <article class="project">
-        <h3>Taking search and maps from a prototype to the core product</h3>
-        <p class="meta">RetroRate · 2025–2026 · Proof of concept to production</p>
+      <article class="card c-ink">
+        <span class="n">05 — Search &amp; maps · 2025–26</span>
+        <h3>From a Google Maps prototype to the core product.</h3>
+        <p class="sum">The experience most users touch first: split list/map views, nationwide geocoded search, and county- and ZIP-level browsing.</p>
         <div class="shots">
-          <button type="button" data-full="media/app-example.png"><img src="media/app-example.png" alt="RetroRate web app showing the split map and list search view, with assumable listings pinned on the map and result cards showing rate, monthly savings and loan terms" loading="lazy"></button>
+          <button type="button" data-full="media/app-example.png"><img src="media/app-example-thumb.png" width="578" height="440" alt="RetroRate web app with split map and list search view" loading="lazy"></button>
         </div>
-        <p class="body">
-          The map and search experience is the product most users touch first, and it started
-          as a Google Maps proof of concept. I took it to production: split list/map views,
-          status-colored markers, geocoded location search backed by a nationwide dataset, and
-          county- and ZIP-level search for buyers who didn't have a single address to start
-          from. The unglamorous part was keeping it working everywhere it needed to: a long
-          tail of responsiveness, Safari, and mobile fixes, plus the state bugs that only
-          surface once real users stack filters in combinations no spec accounted for.
-        </p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>I took it to production with status-colored markers, geocoded location search backed by a nationwide dataset, and county and ZIP search for buyers who didn't have a single address to start from. The unglamorous part was keeping it working everywhere: a long tail of responsiveness, Safari and mobile fixes, plus the state bugs that only surface once real users stack filters in combinations no spec accounted for.</p>
+          </div>
+        </details>
         <p class="stack">TypeScript · React · Google Maps · Node</p>
       </article>
 
-      <article class="project">
-        <h3>Replacing an SFTP file drop with a real API</h3>
-        <p class="meta">Relay (formerly Kompas Care) · 2024–present · Contract</p>
-        <p class="body">
-          Advised a small business on replacing their manual SFTP file-ingestion process with
-          a REST API, then designed and built it in C#/.NET. I migrated their existing
-          customers onto the new interface and onboarded new ones, replacing bespoke
-          per-customer integration work with a repeatable process and documentation written
-          for non-technical stakeholders — so onboarding no longer depended on me being in
-          the room.
-        </p>
-        <p class="stack">C# · .NET · REST</p>
-      </article>
-
-      <article class="project">
-        <h3>An offline-first field app, and the GraphQL layer underneath it</h3>
-        <p class="meta">GE HealthCare · 2021–2025 · Tech lead</p>
-        <p class="body">
-          FX2 is a business-critical app for field teams who can't count on having a
-          connection, so it had to work fully offline across iOS, Android and Windows. I was
-          tech lead from stack exploration and proof of concept through delivery, and built its
-          Apollo GraphQL API layer from the ground up, serving more than 10,000 users globally.
-          That layer was also the company's first GraphQL integration with its major CRM
-          systems, so part of the job was getting teams who had only ever exposed REST to agree
-          on a new contract. Outside the app itself I maintained the cloud infrastructure behind
-          several critical app suites, migrated an AWS-hosted application to cut its monthly
-          cost by more than 60%, and mentored two engineers delivering features alongside me.
-        </p>
+      <article class="card c-outline">
+        <span class="n">06 — GE HealthCare FX2 · 2021–25 · Tech lead</span>
+        <h3>An app that works in a hospital basement.</h3>
+        <div class="stat">10k+</div>
+        <p class="sum">users worldwide on an offline-first field app for iOS, Android and Windows, plus the GraphQL layer I built underneath it.</p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>FX2 is a business-critical app for field teams who can't count on a connection. I was tech lead from stack exploration and proof of concept through delivery, and built its Apollo GraphQL API from the ground up. It was the company's first GraphQL integration with its major CRM systems, so part of the job was getting teams who had only ever exposed REST to agree on a new contract.</p>
+            <p>Outside the app I maintained cloud infrastructure behind several critical app suites, migrated an AWS-hosted application to cut its monthly cost by more than 60%, and mentored two engineers.</p>
+          </div>
+        </details>
         <p class="stack">GraphQL (Apollo) · React Native · React · Java · AWS · Docker</p>
       </article>
 
-      <article class="project">
-        <h3>An automation practice that saved $1M a year</h3>
-        <p class="meta">GE HealthCare · 2019–2021 · Digital Technology Leadership Program</p>
-        <p class="body">
-          The leadership program rotated me through technical product management, full stack
-          engineering and network architecture. In the product rotation I kept hitting the same
-          manual processes duplicated across teams, so I pioneered an automation foundry to
-          attack them and built the internal site that got other teams actually using it. The
-          projects it delivered saved more than 20,000 hours and about $1 million annually. A
-          later rotation had me testing and deploying firmware updates to thousands of live
-          devices across active hospitals.
-        </p>
+      <article class="card c-yellow">
+        <span class="n">07 — Automation foundry · 2019–21</span>
+        <div class="stat">$1M</div>
+        <p class="sum">saved per year, and 20,000+ hours, from an automation practice I started as a rotational hire.</p>
+        <details>
+          <summary>Full story</summary>
+          <div class="story">
+            <p>GE's Digital Technology Leadership Program rotated me through product management, full-stack engineering and network architecture. In the product rotation I kept hitting the same manual processes duplicated across teams, so I started an automation foundry to attack them and built the internal site that got other teams actually using it. A later rotation had me testing and deploying firmware updates to thousands of live devices in active hospitals.</p>
+          </div>
+        </details>
         <p class="stack">React · Angular · Java · SQL · Jenkins</p>
+      </article>
+
+      <article class="card wide c-sand">
+        <span class="n">08 — Relay (formerly Kompas Care) · 2024–present · Contract</span>
+        <h3>Replacing an SFTP file drop with a real API.</h3>
+        <p class="sum" style="max-width:60ch">I advised a small business on replacing manual SFTP file ingestion with a REST API, then designed and built it in C#/.NET, migrated existing customers, and wrote onboarding docs for non-technical stakeholders, so onboarding no longer depended on me being in the room.</p>
+        <p class="stack">C# · .NET · REST</p>
       </article>
 
     </div>
   </section>
 
-  <section id="experience" class="shell">
-    <div class="section-head"><h2>Experience</h2></div>
-    <ul class="roles">
-      <li>
-        <span class="title">Founding Software Engineer</span>
-        <span class="when">Feb 2025 – Sep 2026</span>
-        <span class="org">RetroRate — real estate fintech startup</span>
-      </li>
-      <li>
-        <span class="title">Senior Software Engineer, Contract</span>
-        <span class="when">Sep 2024 – Present</span>
-        <span class="org">Relay (formerly Kompas Care)</span>
-      </li>
-      <li>
-        <span class="title">Senior Software Engineer</span>
-        <span class="when">Jul 2021 – Feb 2025</span>
-        <span class="org">GE HealthCare</span>
-      </li>
-      <li>
-        <span class="title">Digital Technology Leadership Program</span>
-        <span class="when">Jul 2019 – Jul 2021</span>
-        <span class="org">GE HealthCare — rotations in full stack engineering, network architecture, technical product management</span>
-      </li>
-    </ul>
+  <section id="about">
+    <h2>Things I believe.</h2>
+    <div class="beliefs">
+      <div><b>Start small, learn fast.</b>The first version is how you find out what the second one needs to be.</div>
+      <div><b>The details are the product.</b>Architecture earns trust from engineers. Details earn it from users.</div>
+      <div><b>Simple scales.</b>The easiest system to grow is the one everyone can understand.</div>
+    </div>
 
-    <div class="section-head" style="margin-top:44px;"><h2>Education</h2></div>
-    <ul class="roles">
-      <li>
-        <span class="title">M.S. Computer Science — Machine Learning</span>
-        <span class="when">2020 – 2023</span>
-        <span class="org">Georgia Institute of Technology</span>
-      </li>
-      <li>
-        <span class="title">B.S. Computer Engineering &amp; Computer Science</span>
-        <span class="when">2014 – 2019</span>
-        <span class="org">University of Wisconsin</span>
-      </li>
-    </ul>
-  </section>
+    <h2>The route so far.</h2>
+    <div class="timeline">
+      <div><small>2014–19</small><b>University of Wisconsin <i class="jump" title="Jump around!" aria-hidden="true">🦡</i><i class="jump jump--late" title="On Wisconsin!" aria-hidden="true">👐</i></b><span>B.S. Computer Engineering &amp; Computer Science</span></div>
+      <div><small>2019–25</small><b>GE HealthCare</b><span>Leadership program rotations, then senior engineer and tech lead</span></div>
+      <div><small>2020–23</small><b>Georgia Tech <i class="bee" title="Buzz!" aria-hidden="true">🐝</i></b><span>M.S. Computer Science, Machine Learning</span></div>
+      <div><small>2024–now</small><b>Relay</b><span>Senior engineer, contract</span></div>
+      <div><small>2025–26</small><b>RetroRate</b><span>Founding software engineer</span></div>
+      <div><small>Next</small><b>Your team?</b><a href="#contact">Let's talk →</a></div>
+    </div>
 
-  <section id="toolkit" class="shell">
-    <div class="section-head"><h2>Toolkit</h2></div>
+    <h2>Off the clock.</h2>
+    <div class="hobbies">
+      <div class="hobby c-yellow">
+        <span class="emo" aria-hidden="true">🤾</span>
+        <b>Spikeball</b>
+        <p>Technically former professional. The career was brief, the stats are unavailable, and the title is permanent. No further questions.</p>
+      </div>
+      <div class="hobby c-blue">
+        <span class="emo" aria-hidden="true">🏂</span>
+        <b>Snowboarding</b>
+        <p>Living in San Diego makes this hobby wildly inconvenient. I do it anyway.</p>
+      </div>
+      <div class="hobby c-coral">
+        <span class="hobby-tag">Latest build 🎯</span>
+        <span class="emo" aria-hidden="true">🍓</span>
+        <b>Raspberry Pi projects</b>
+        <p>Chronic tinkerer. Most recently a DIY Autodarts setup: cameras on the board that detect and score every dart automatically.</p>
+      </div>
+    </div>
+
+    <h2>Toolbox.</h2>
     <div class="kit">
-      <div>
-        <h4>Languages</h4>
-        <p>TypeScript, JavaScript, Python, C#, Java, SQL</p>
-      </div>
-      <div>
-        <h4>Frontend</h4>
-        <p>React, React Native, Vite, Chrome extensions</p>
-      </div>
-      <div>
-        <h4>Backend</h4>
-        <p>Node, Express, GraphQL, REST, background workers</p>
-      </div>
-      <div>
-        <h4>Data</h4>
-        <p>MongoDB, BigQuery, SQL Server, large-scale backfills</p>
-      </div>
-      <div>
-        <h4>Cloud &amp; infrastructure</h4>
-        <p>GCP, AWS, Docker, CI/CD, Terraform, Sentry</p>
-      </div>
-      <div>
-        <h4>AI</h4>
-        <p>Gemini, Vertex AI, LLM integration in production paths</p>
-      </div>
+      <div><h4>Languages</h4><p>TypeScript, JavaScript, Python, C#, Java, SQL</p></div>
+      <div><h4>Frontend</h4><p>React, React Native, Vite, Chrome extensions</p></div>
+      <div><h4>Backend</h4><p>Node, Express, GraphQL, REST, background workers</p></div>
+      <div><h4>Data</h4><p>MongoDB, BigQuery, SQL Server, large-scale backfills</p></div>
+      <div><h4>Cloud &amp; infra</h4><p>GCP, AWS, Docker, CI/CD, Terraform, Sentry</p></div>
+      <div><h4>AI</h4><p>Gemini, Vertex AI, LLMs in production paths</p></div>
     </div>
   </section>
+</div>
 
-  <footer id="contact" class="shell">
-    <div class="foot-links">
-      <a href="mailto:boclow34@gmail.com">boclow34@gmail.com</a>
-      <a href="https://linkedin.com/in/bo-clow" rel="me noopener" target="_blank">linkedin.com/in/bo-clow</a>
-      <a href="./Bo_Clow_Resume.pdf">Résumé (PDF)</a>
+<footer id="contact">
+  <div class="shell">
+    <h2>Let's build something.</h2>
+    <p>Open to senior engineering roles, especially on small teams building something new.</p>
+    <div class="cta-row">
+      <a class="btn btn--solid" href="mailto:boclow34@gmail.com">boclow34@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/bo-clow" rel="me noopener" target="_blank">LinkedIn</a>
+      <a class="btn" href="./Bo_Clow_Resume.pdf">Résumé (PDF)</a>
     </div>
-  </footer>
+    <p class="fine">Bo Clow · San Diego, CA</p>
+  </div>
+</footer>
 
-</main>
-
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot">
   <img id="lightbox-img" src="" alt="">
 </div>
 <script>
@@ -429,13 +560,13 @@
       img.alt = btn.querySelector('img').alt;
     }
     function open(btn){
-      group = Array.prototype.slice.call(btn.closest('.shots').querySelectorAll('button'));
+      group = Array.prototype.slice.call(btn.closest('.card').querySelectorAll('button[data-full]'));
       show(group.indexOf(btn));
       box.classList.add('is-open');
     }
     function close(){ box.classList.remove('is-open'); img.src = ''; }
 
-    document.querySelectorAll('.shots button').forEach(function(btn){
+    document.querySelectorAll('button[data-full]').forEach(function(btn){
       btn.addEventListener('click', function(){ open(btn); });
     });
     box.addEventListener('click', close);
