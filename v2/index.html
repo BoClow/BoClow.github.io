@@ -238,6 +238,17 @@
     93%{transform:translateY(0) scale(1)}
   }
 
+  .hobbies{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .hobby{border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:8px;position:relative;transition:transform .2s}
+  .hobby:nth-child(odd){transform:rotate(-1deg)}
+  .hobby:nth-child(even){transform:rotate(1deg)}
+  .hobby:hover{transform:rotate(0) translateY(-4px)}
+  .hobby b{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;line-height:1.05}
+  .hobby p{margin:0}
+  .hobby .emo{font-size:44px;line-height:1;display:inline-block;width:max-content;transform-origin:50% 90%}
+  .hobby:hover .emo{animation:emo-wiggle .6s ease-in-out}
+  @keyframes emo-wiggle{25%{transform:rotate(-12deg) scale(1.1)}50%{transform:rotate(10deg) scale(1.1)}75%{transform:rotate(-4deg)}}
+  .hobby-tag{position:absolute;top:-14px;right:18px;background:var(--ink);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;padding:7px 13px;border-radius:999px;transform:rotate(4deg)}
   .kit{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .kit div{background:var(--sand);border-radius:18px;padding:22px}
   .kit h4{font-family:var(--display);font-weight:700;font-size:18px;margin:0 0 6px}
@@ -255,7 +266,7 @@
   .lightbox img{max-width:100%;max-height:100%;border-radius:10px}
 
   @media (max-width:860px){
-    .hero,.feature,.beliefs,.kit{grid-template-columns:1fr}
+    .hero,.feature,.beliefs,.kit,.hobbies{grid-template-columns:1fr}
     .badge{max-width:340px}
     .grid{grid-template-columns:1fr}
     .card.wide{grid-column:auto}
@@ -463,6 +474,26 @@
       <div><small>2024–now</small><b>Relay</b><span>Senior engineer, contract</span></div>
       <div><small>2025–26</small><b>RetroRate</b><span>Founding software engineer</span></div>
       <div><small>Next</small><b>Your team?</b><a href="#contact">Let's talk →</a></div>
+    </div>
+
+    <h2>Off the clock.</h2>
+    <div class="hobbies">
+      <div class="hobby c-blue">
+        <span class="emo" aria-hidden="true">🏂</span>
+        <b>Snowboarding</b>
+        <p>Winters are for the mountains. If there's fresh snow, I'm trying to get on it.</p>
+      </div>
+      <div class="hobby c-yellow">
+        <span class="emo" aria-hidden="true">🤾</span>
+        <b>Spikeball</b>
+        <p>Always down for a game. Bring a partner.</p>
+      </div>
+      <div class="hobby c-coral">
+        <span class="hobby-tag">Latest build 🎯</span>
+        <span class="emo" aria-hidden="true">🍓</span>
+        <b>Raspberry Pi projects</b>
+        <p>I keep building after hours too. Most recently an Autodarts setup: cameras on the board that detect and score every dart automatically.</p>
+      </div>
     </div>
 
     <h2>Toolbox.</h2>
