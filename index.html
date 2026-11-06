@@ -316,6 +316,7 @@
     .shots button,.shots-lead{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%3E%3Ccircle%20cx%3D%2221.5%22%20cy%3D%2221.5%22%20r%3D%2216%22%20fill%3D%22%23111%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2219%22%20r%3D%2216%22%20fill%3D%22%23FFD23F%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M19%2011v16M11%2019h16%22%20stroke%3D%22%23111%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E") 19 19,zoom-in}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
 </style>
 </head>
 <body>
@@ -596,6 +597,23 @@
       else if(e.key === 'ArrowRight'){ e.preventDefault(); show(index + 1); }
       else if(e.key === 'ArrowLeft'){ e.preventDefault(); show(index - 1); }
     });
+  })();
+
+  (function(){
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.grid > .card'));
+    // Keep a card at its own height when the other card in its row has its story open.
+    function sync(){
+      cards.forEach(function(c){ c.style.alignSelf = ''; });
+      var rows = {};
+      cards.forEach(function(c){ (rows[c.offsetTop] = rows[c.offsetTop] || []).push(c); });
+      Object.keys(rows).forEach(function(top){
+        var row = rows[top];
+        if(!row.some(function(c){ return c.querySelector('details[open]'); })) return;
+        row.forEach(function(c){ if(!c.querySelector('details[open]')) c.style.alignSelf = 'start'; });
+      });
+    }
+    document.querySelectorAll('.grid details').forEach(function(d){ d.addEventListener('toggle', sync); });
+    window.addEventListener('resize', sync);
   })();
 </script>
 
